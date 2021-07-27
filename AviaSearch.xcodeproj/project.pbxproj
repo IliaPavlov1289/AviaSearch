@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6343551C26ADB1B7003AD23C /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6343551B26ADB1B7003AD23C /* PlaceViewController.m */; };
 		63E813F426A853D5001F1BA6 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 63E813F326A853D5001F1BA6 /* airports.json */; };
 		63E813F626A853EE001F1BA6 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 63E813F526A853EE001F1BA6 /* cities.json */; };
 		63E813F826A853F6001F1BA6 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 63E813F726A853F6001F1BA6 /* countries.json */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6343551A26ADB1B7003AD23C /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		6343551B26ADB1B7003AD23C /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		63E813F326A853D5001F1BA6 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		63E813F526A853EE001F1BA6 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		63E813F726A853F6001F1BA6 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				63EA701D26A83B2000D3CC65 /* main.m */,
 				63E8140426A85C08001F1BA6 /* DataManager.h */,
 				63E8140526A85C08001F1BA6 /* DataManager.m */,
+				6343551A26ADB1B7003AD23C /* PlaceViewController.h */,
+				6343551B26ADB1B7003AD23C /* PlaceViewController.m */,
 			);
 			path = AviaSearch;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6343551C26ADB1B7003AD23C /* PlaceViewController.m in Sources */,
 				63EA701326A83B1F00D3CC65 /* StartViewController.m in Sources */,
 				63EA700D26A83B1F00D3CC65 /* AppDelegate.m in Sources */,
 				63E8140326A857B5001F1BA6 /* Airport.m in Sources */,
