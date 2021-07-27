@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlaceViewController.h"
 
-@interface StartViewController : UIViewController
+@interface StartViewController : UIViewController <PalceViewControllerDelegate>
 
 
 @end
