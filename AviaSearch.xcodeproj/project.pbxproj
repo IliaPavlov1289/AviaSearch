@@ -12,6 +12,7 @@
 		6341EFD626B71E8B0050B72F /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6341EFD526B71E8B0050B72F /* TicketsViewController.m */; };
 		6341EFD926B71ECB0050B72F /* TicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6341EFD826B71ECB0050B72F /* TicketTableViewCell.m */; };
 		6343551C26ADB1B7003AD23C /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6343551B26ADB1B7003AD23C /* PlaceViewController.m */; };
+		6349196626BD8EA50061F665 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349196526BD8EA50061F665 /* TabBarController.m */; };
 		63E813F426A853D5001F1BA6 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 63E813F326A853D5001F1BA6 /* airports.json */; };
 		63E813F626A853EE001F1BA6 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 63E813F526A853EE001F1BA6 /* cities.json */; };
 		63E813F826A853F6001F1BA6 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 63E813F726A853F6001F1BA6 /* countries.json */; };
@@ -25,6 +26,9 @@
 		63EA701826A83B2000D3CC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EA701726A83B2000D3CC65 /* Assets.xcassets */; };
 		63EA701B26A83B2000D3CC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EA701926A83B2000D3CC65 /* LaunchScreen.storyboard */; };
 		63EA701E26A83B2000D3CC65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EA701D26A83B2000D3CC65 /* main.m */; };
+		63F730F826B9933A009F8E66 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F730F726B9933A009F8E66 /* LocationService.m */; };
+		63F730FB26B993CE009F8E66 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F730FA26B993CE009F8E66 /* MapPrice.m */; };
+		63F730FE26B9950B009F8E66 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F730FD26B9950B009F8E66 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,8 @@
 		6341EFD826B71ECB0050B72F /* TicketTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketTableViewCell.m; sourceTree = "<group>"; };
 		6343551A26ADB1B7003AD23C /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		6343551B26ADB1B7003AD23C /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		6349196426BD8EA50061F665 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		6349196526BD8EA50061F665 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		63E813F326A853D5001F1BA6 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		63E813F526A853EE001F1BA6 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		63E813F726A853F6001F1BA6 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
@@ -60,6 +66,12 @@
 		63EA701A26A83B2000D3CC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63EA701C26A83B2000D3CC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63EA701D26A83B2000D3CC65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63F730F626B9933A009F8E66 /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
+		63F730F726B9933A009F8E66 /* LocationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
+		63F730F926B993CE009F8E66 /* MapPrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapPrice.h; sourceTree = "<group>"; };
+		63F730FA26B993CE009F8E66 /* MapPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPrice.m; sourceTree = "<group>"; };
+		63F730FC26B9950B009F8E66 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		63F730FD26B9950B009F8E66 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +135,6 @@
 				63E813FA26A85737001F1BA6 /* Model */,
 				63EA701126A83B1F00D3CC65 /* StartViewController.h */,
 				63EA701226A83B1F00D3CC65 /* StartViewController.m */,
-				63EA701726A83B2000D3CC65 /* Assets.xcassets */,
 				63EA701926A83B2000D3CC65 /* LaunchScreen.storyboard */,
 				63EA701C26A83B2000D3CC65 /* Info.plist */,
 				63EA701D26A83B2000D3CC65 /* main.m */,
@@ -139,6 +150,15 @@
 				6341EFD526B71E8B0050B72F /* TicketsViewController.m */,
 				6341EFD726B71ECB0050B72F /* TicketTableViewCell.h */,
 				6341EFD826B71ECB0050B72F /* TicketTableViewCell.m */,
+				63F730F626B9933A009F8E66 /* LocationService.h */,
+				63F730F726B9933A009F8E66 /* LocationService.m */,
+				63F730F926B993CE009F8E66 /* MapPrice.h */,
+				63F730FA26B993CE009F8E66 /* MapPrice.m */,
+				63F730FC26B9950B009F8E66 /* MapViewController.h */,
+				63F730FD26B9950B009F8E66 /* MapViewController.m */,
+				6349196426BD8EA50061F665 /* TabBarController.h */,
+				6349196526BD8EA50061F665 /* TabBarController.m */,
+				63EA701726A83B2000D3CC65 /* Assets.xcassets */,
 			);
 			path = AviaSearch;
 			sourceTree = "<group>";
@@ -223,9 +243,13 @@
 				6341EFD626B71E8B0050B72F /* TicketsViewController.m in Sources */,
 				63E8140026A857A4001F1BA6 /* City.m in Sources */,
 				63EA701E26A83B2000D3CC65 /* main.m in Sources */,
+				63F730FB26B993CE009F8E66 /* MapPrice.m in Sources */,
 				63E8140626A85C08001F1BA6 /* DataManager.m in Sources */,
+				6349196626BD8EA50061F665 /* TabBarController.m in Sources */,
+				63F730FE26B9950B009F8E66 /* MapViewController.m in Sources */,
 				6341EFD326B71E280050B72F /* Ticket.m in Sources */,
 				63EA701026A83B1F00D3CC65 /* SceneDelegate.m in Sources */,
+				63F730F826B9933A009F8E66 /* LocationService.m in Sources */,
 				63E813FD26A8578D001F1BA6 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 
 #import "APIManager.h"
 #import "Ticket.h"
+#import "MapPrice.h"
 
 #define API_TOKEN @"9cfb220fbf225dc196d63ea213925fc8"
 #define API_URL_IP_ADDRESS @"https://api.ipify.org/?format=json"
@@ -50,13 +51,7 @@
 }
 
 - (void)load:(NSString *)urlString withCompletion:(void (^)(id _Nullable result))completion {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//       [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-//    });
     [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-//        });
         if (!error) {
          completion([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]);
         }
@@ -92,6 +87,27 @@ NSString * SearchRequestQuery(SearchRequest request) {
         result = [NSString stringWithFormat:@"%@&depart_date=%@&return_date=%@", result, [dateFormatter stringFromDate:request.departDate], [dateFormatter stringFromDate:request.returnDate]];
     }
     return result;
+}
+
+- (void)mapPricesFor:(City *)origin withCompletion:(void (^)(NSArray *prices))completion
+{
+    static BOOL isLoading;
+    if (isLoading) { return; }
+    isLoading = YES;
+    [self load:[NSString stringWithFormat:@"%@%@", API_URL_MAP_PRICE, origin.code] withCompletion:^(id  _Nullable result) {
+        NSArray *array = result;
+        NSMutableArray *prices = [NSMutableArray new];
+        if (array) {
+            for (NSDictionary *mapPriceDictionary in array) {
+                MapPrice *mapPrice = [[MapPrice alloc] initWithDictionary:mapPriceDictionary withOrigin:origin];
+                [prices addObject:mapPrice];
+            }
+            isLoading = NO;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(prices);
+            });
+        }
+    }];
 }
 
 @end
