@@ -100,4 +100,13 @@
     return nil;
 }
 
+- (City *)cityForLocation:(CLLocation *)location {
+    for (City *city in _citiesArray) {
+        if (ceilf(city.coordinate.latitude) == ceilf(location.coordinate.latitude) && ceilf(city.coordinate.longitude) == ceilf(location.coordinate.longitude)) {
+            return city;
+        }
+    }
+    return nil;
+}
+
 @end

@@ -7,6 +7,8 @@
 
 #import "SceneDelegate.h"
 #import "StartViewController.h"
+#import "MapViewController.h"
+#import "TabBarController.h"
 
 @interface SceneDelegate ()
 
@@ -19,13 +21,17 @@
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:windowFrame];
     
-    StartViewController *startViewController = [StartViewController new];
-    UINavigationController *navigatinController = [[UINavigationController alloc] initWithRootViewController:startViewController];
+    //MapViewController *startViewController = [[MapViewController alloc] init];
+   // StartViewController *startViewController = [StartViewController new];
+   // UINavigationController *navigatinController = [[UINavigationController alloc] initWithRootViewController:startViewController];
+    
+    TabBarController *tabBarController = [TabBarController new];
+    self.window.rootViewController = tabBarController;
     
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     [self.window setWindowScene:windowScene];
     
-    self.window.rootViewController = navigatinController;
+//    self.window.rootViewController = navigatinController;
     [self.window makeKeyAndVisible];
 }
 
