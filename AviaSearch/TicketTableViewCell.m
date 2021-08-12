@@ -7,6 +7,8 @@
 
 #import "TicketTableViewCell.h"
 #import "Ticket.h"
+#import "FavoriteTicket+CoreDataClass.h"
+#import "FavoriteTicket+CoreDataProperties.h"
 
 #define AirlineLogo(iata) [NSURL URLWithString:[NSString stringWithFormat:@"https://pics.avs.io/200/200/%@.png", iata]];
 
@@ -79,5 +81,21 @@
 
 }
 
+- (void)setFavoriteTicket:(FavoriteTicket *)favoriteTicket {
+    _favoriteTicket = favoriteTicket;
+    
+    _priceLabel.text = [NSString stringWithFormat:@"%lld руб.", favoriteTicket.price];
+    _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", favoriteTicket.from, favoriteTicket.to];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd MMMM yyyy hh:mm";
+    _dateLabel.text = [dateFormatter stringFromDate:favoriteTicket.departure];
+    NSURL *urlLogo = AirlineLogo(favoriteTicket.airline);
+    [[[NSURLSession sharedSession] dataTaskWithURL:urlLogo completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self->_airlineLogoView.image = [UIImage imageWithData:data];
+       });
+    }] resume] ;
+}
 
 @end

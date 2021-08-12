@@ -29,11 +29,14 @@
     return self;
 }
 
-- (void)locationManagerDidChangeAuthorization:(CLLocationManager *)manager  {
-    if (manager.authorizationStatus == kCLAuthorizationStatusAuthorizedAlways || manager.authorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    
+    if (status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse) {
         [_locationManager startUpdatingLocation];
-    } else if (manager.authorizationStatus != kCLAuthorizationStatusNotDetermined) {
-        NSLog(@"StatusNotDetermined");
+    } else if (status != kCLAuthorizationStatusNotDetermined) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Упс!" message:@"Не удалось определить текущий город!" preferredStyle: UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
     }
 }
 
