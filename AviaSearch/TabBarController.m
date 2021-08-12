@@ -8,6 +8,7 @@
 #import "TabBarController.h"
 #import "StartViewController.h"
 #import "MapViewController.h"
+#import "TicketsViewController.h"
 
 @interface TabBarController ()
 
@@ -39,6 +40,11 @@
     mapViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Карта цен" image:[UIImage systemImageNamed:@"map"] selectedImage:[UIImage systemImageNamed:@"map"]];
     UINavigationController *mapNavigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
     [controllers addObject:mapNavigationController];
+    
+    TicketsViewController *favoriteViewController = [[TicketsViewController alloc] initFavoriteTicketsController];
+        favoriteViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Избранное" image:[UIImage systemImageNamed:@"heart"] selectedImage:[UIImage systemImageNamed:@"heart"]];
+        UINavigationController *favoriteNavigationController = [[UINavigationController alloc] initWithRootViewController:favoriteViewController];
+        [controllers addObject:favoriteNavigationController];
     
     return controllers;
 }

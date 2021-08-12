@@ -21,17 +21,12 @@
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:windowFrame];
     
-    //MapViewController *startViewController = [[MapViewController alloc] init];
-   // StartViewController *startViewController = [StartViewController new];
-   // UINavigationController *navigatinController = [[UINavigationController alloc] initWithRootViewController:startViewController];
-    
     TabBarController *tabBarController = [TabBarController new];
     self.window.rootViewController = tabBarController;
     
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     [self.window setWindowScene:windowScene];
     
-//    self.window.rootViewController = navigatinController;
     [self.window makeKeyAndVisible];
 }
 

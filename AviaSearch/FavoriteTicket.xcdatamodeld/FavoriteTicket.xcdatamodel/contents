@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="FavoriteTicket" representedClassName="FavoriteTicket" syncable="YES">
+        <attribute name="addFromList" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="airline" optional="YES" attributeType="String"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="departure" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="expires" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="flightNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="from" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="returnDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="to" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="FavoriteTicket" positionX="-63" positionY="-18" width="128" height="179"/>
+    </elements>
+</model>

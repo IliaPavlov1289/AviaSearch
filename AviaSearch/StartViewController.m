@@ -77,6 +77,11 @@
 }
 
 - (void)searchButtonDidTap:(UIButton *)sender {
+    if (([_departureButton.titleLabel.text  isEqual: @"Откуда"]) || ([_arrivalButton.titleLabel.text  isEqual: @"Куда"])){
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Упс" message:@"Похоже вы не указали место отправления или прибытия" preferredStyle: UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
+    } else {
 [[APIManager sharedInstance] ticketsWithRequest:_searchRequest withCompletion:^(NSArray *tickets) {
     if (tickets.count > 0) {
         TicketsViewController *ticketsViewController = [[TicketsViewController alloc] initWithTickets:tickets];
@@ -86,9 +91,10 @@
         [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
         [self presentViewController:alertController animated:YES completion:nil];
     }
-}];
+        }];
+    }
 }
-
+    
 - (void)dataLoadedSuccessfully {
 [[APIManager sharedInstance] cityForCurrentIP:^(City *city) {
     [self setPlace:city withDataType:DataSourceTypeCity andPlaceType:PlaceTypeDeparture forButton:self->_departureButton];

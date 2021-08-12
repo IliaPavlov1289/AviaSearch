@@ -29,8 +29,6 @@
     return self;
 }
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -95,13 +93,11 @@
     }
     if (_segmentedControl.selectedSegmentIndex == 0) {
         City *city = (_searchController.isActive && [_searchArray count] > 0) ? [_searchArray objectAtIndex:indexPath.row] : [_currentArray objectAtIndex:indexPath.row];
-        //City *city = [_currentArray objectAtIndex:indexPath.row];
         cell.textLabel.text = city.name;
         cell.detailTextLabel.text = city.code;
     }
     else if (_segmentedControl.selectedSegmentIndex == 1) {
         Airport *airport = (_searchController.isActive && [_searchArray count] > 0) ? [_searchArray objectAtIndex:indexPath.row] : [_currentArray objectAtIndex:indexPath.row];
-        //Airport *airport = [_currentArray objectAtIndex:indexPath.row];
         cell.textLabel.text = airport.name;
         cell.detailTextLabel.text = airport.code;
     }

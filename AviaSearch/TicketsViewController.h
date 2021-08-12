@@ -9,9 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum FavoriteType {
+    FavoriteTypeList,
+    FavoriteTypeMap
+} FavoriteType;
+
 @interface TicketsViewController : UITableViewController
 
 - (instancetype)initWithTickets:(NSArray *)tickets;
+- (instancetype)initFavoriteTicketsController;
 
 @end
 
