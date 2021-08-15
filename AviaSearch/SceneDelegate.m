@@ -9,6 +9,7 @@
 #import "StartViewController.h"
 #import "MapViewController.h"
 #import "TabBarController.h"
+#import "NotificationCenter.h"
 
 @interface SceneDelegate ()
 
@@ -28,6 +29,7 @@
     [self.window setWindowScene:windowScene];
     
     [self.window makeKeyAndVisible];
+    [[NotificationCenter sharedInstance] registerService];
 }
 
 
